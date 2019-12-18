@@ -12,17 +12,17 @@ This forces the image to be build from scratch.
 
 # HELP I AM NEW TO DOCKER Section
 Get a list of all containers:
-  docker container ls -a
+    docker container ls -a
 To remove a container
-  docker container rm CONTAINERID
+    docker container rm CONTAINERID
 To remove all stopped containers
-  docker container prune
+    docker container prune
 
 To get a list of all images
-  docker image ls
+    docker image ls
 To remove an image
-  docker image rm IMAGEID
+    docker image rm IMAGEID
 Dangling images can be removed with
-  docker image prune
+    docker image prune
 Remove all dangling images
-  docker image prune -a
+    docker image prune -a
