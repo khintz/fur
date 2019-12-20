@@ -1,0 +1,15 @@
+Readme for creating the parent image
+
+Following instructions from:
+https://ropenscilabs.github.io/r-docker-tutorial/04-Dockerhub.html
+
+pushing to
+https://hub.docker.com/
+or more specifically:
+https://hub.docker.com/r/khintz/harp/
+
+To push:
+1. docker login (you need credentials to do this)
+2. docker images (Check your current local images)
+3. docker tag IMAGEID yourhubusername/harp:SOMETAG
+4. docker push yourhubusername/harp
