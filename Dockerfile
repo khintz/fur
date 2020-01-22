@@ -1,4 +1,4 @@
-FROM khintz/harp:testing
+FROM khintz/harp:latest
 
 RUN mkdir -p /harpapp
 COPY src/* /harpapp
