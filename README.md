@@ -28,6 +28,10 @@ If you want to do it yourself step-by-step then see build and run below.
 # Troubleshooting
 If for some reason the image fails to build and returns a 404 error code, then add "--no-cache" to the Docker build file in deploy.sh. This forces the image to be build from scratch.
 
+# Overview
+![Overview in a sketch](image_src/fur.jpg)
+
+
 # "Help me! I am new to docker"-section
 Get a list of all containers:
 ```

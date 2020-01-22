@@ -1,8 +1,6 @@
 FROM ubuntu:18.04
-
-ENV DEBIAN_FRONTEND noninteractive
-
 RUN apt-get update
+ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get -y install build-essential
 RUN apt-get -y install cmake wget gfortran libcurl4-openssl-dev libssl-dev
 RUN apt-get -y install software-properties-common gtk-doc-tools libfontconfig1-dev
@@ -33,7 +31,7 @@ RUN apt-get install -y r-base=3.6.2-1bionic
 RUN R -e "install.packages('devtools',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('ggplot2',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 
-COPY install_harp.R /
+#COPY install_harp.R /
 COPY test_harp.R /
 
 #CMD ["Rscript", "install_harp.R"]
