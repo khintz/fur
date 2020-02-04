@@ -30,9 +30,9 @@ print("Forecast data")
 print(forecast_data)
 vobs_sql_path      <- "/data/OBSTABLE"
 vfld_sql_path      <- "/data/FCTABLE"
-first_fcst <- 2019060100
-last_fcst <-  2019060200
-fcst_models <- c("EC9")
+first_fcst <- 2016060100
+last_fcst <-  2016060200
+fcst_models <- c("carra")
 param        <- "T2m"
 
 
