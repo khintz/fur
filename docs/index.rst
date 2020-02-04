@@ -3,18 +3,26 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to fur's documentation!
+fur documentation
 ===============================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
+   install
+   
+ =====
+ fur
+ =====
+
+ FU-NWP DMI container environment for development using R and HARP.
+ For HARP references see the HARP GitHub repo <https://github.com/andrew-MET/harp>.
 
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. Indices and tables
+.. ==================
+..
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
