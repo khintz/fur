@@ -6,18 +6,18 @@
 fur documentation
 ===============================
 
-.. toctree::
-   :maxdepth: 3
-   :caption: Contents:
+  .. toctree::
+     :maxdepth: 1
+     :hidden:
 
-   install
-   
+     install
+     run
+
  =====
  fur
  =====
-
  FU-NWP DMI container environment for development using R and HARP.
- For HARP references see the HARP GitHub repo <https://github.com/andrew-MET/harp>.
+ For HARP references see the `HARP GitHub repo <https://github.com/andrew-MET/harp>`_.
 
 
 .. Indices and tables
