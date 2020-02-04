@@ -2,7 +2,16 @@
 FU-NWP DMI container environment for development using R and HARP.\
 For HARP references see: https://github.com/andrew-MET/harp
 
-# Install
+The [documentation](https://fur.readthedocs.io/en/latest/) for *fur* can is published at readthedocs at:\
+https://fur.readthedocs.io/en/latest/
+
+# Quickstart
+**1. `docker pull khintz/harp:testing`**\
+**2. `bash deploy.sh`**
+
+This will build your local image and run the container afterwards. You can use this to run everything even when your source code has changed. It wont rebuild unless necessary.
+
+<!-- # Install
 First install the parent image. This image is precompiled with R and HARP with all the dependencies. From the parent image we build a new image which is used to run our source code in. To get the parent image do:
 
 **1. `docker pull khintz/harp:testing`**\
@@ -72,4 +81,4 @@ docker image prune -a
 Brute force clean images
 ```
 docker rmi $(docker images -a)
-```
+``` -->

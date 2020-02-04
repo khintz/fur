@@ -14,8 +14,14 @@ there is not a lot of requirements.
 ------------
 Installation
 ------------
+Inside the *fur* directory do:
 
+* **docker build -t <*imagename*> .**
 
---------
-Examples
---------
+Here <*imagename*> is your desired name for your local image, e.g. 'harpimage'.
+This will pull and build the parent image that contains HARP and R.
+A local image is being created on your machine from which you can run your code
+inside a container. Note that you skip this and just run **bash deploy.sh**,
+which does everything for you.
+
+The *docker build* commands follows a "recipe" defined by the *Dockerfile* in the directory.
