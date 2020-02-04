@@ -1,4 +1,6 @@
 library(harpIO)
+library(harp)
+
 #print(sample(1:3))
 
 
@@ -22,5 +24,48 @@ forecast_data <- read_eps_interpolate(
   file_path   = vfld_path,
   return_data = TRUE
 )
+print("Forecast data")
 
+#Using some deterministic data below.
 print(forecast_data)
+vobs_sql_path      <- "/data/OBSTABLE"
+vfld_sql_path      <- "/data/FCTABLE"
+first_fcst <- 2019060100
+last_fcst <-  2019060200
+fcst_models <- c("EC9")
+param        <- "T2m"
+
+
+print("Reading fcst data from sql files")
+ fcst <- read_point_forecast(
+   start_date = first_fcst,
+   end_date   = last_fcst,
+   fcst_model = fcst_models,
+   fcst_type  = "det",
+   parameter  = "T2m",
+   by         = "6h",
+   file_path  = vfld_sql_path
+ )
+print("Reading obs data from sql files")
+obs <- read_point_obs(
+    start_date = first_validdate(fcst),
+    end_date   = last_validdate(fcst),
+    parameter  = "T2m",
+    obs_path   = vobs_sql_path
+       )
+
+#combine fcst/obs
+ fcst_obs <- fcst %>%
+     join_to_fcst(obs)
+
+#verify
+ verif <- det_verify(
+         fcst_obs,
+         T2m,
+         thresholds    = quantile(obs$T2m, c(0.25, 0.5, 0.75, 0.9, 0.95)),
+         show_progress = FALSE
+         )
+
+#Finally plot: DO NOT USE YET! Otherwise it might create a local root-owned pdf file
+# plot_point_verif(verif, bias)
+
