@@ -67,6 +67,6 @@ obs <- read_point_obs(
          )
 
 #Finally plot: DO NOT USE YET! Otherwise it might create a local root-owned pdf file
-#plot_point_verif(verif, bias)
+plot_point_verif(verif, bias)
 #this one saved plot in the local container-data directory (tested in old laptop)
-#ggsave(file="/data/verif.pdf")
+ggsave(file="/data/verif.pdf")

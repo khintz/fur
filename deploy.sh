@@ -4,7 +4,8 @@ IMAGENAME=harpdev
 CONTAINERNAME=harprun # Name of the container based on IMAGENAME
 
 #Build the Image
-docker build -t $IMAGENAME .
+#docker build -t $IMAGENAME .
+docker build --build-arg PID=$PID --build-arg GID=$GID -t $IMAGENAME .
 
 #Stop any previous containers with this name before running
 if [ ! "$(docker ps -q -f name=$CONTAINERNAME)" ]; then
@@ -13,7 +14,7 @@ if [ ! "$(docker ps -q -f name=$CONTAINERNAME)" ]; then
         echo "Removing container $CONTAINERNAME"
         docker rm $CONTAINERNAME
     fi
-else    
+else
     docker stop $CONTAINERNAME
     docker rm $CONTAINERNAME
 fi
