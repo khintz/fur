@@ -1,6 +1,10 @@
 **/.DS_Store
 **/__pycache__
 **/*.pyc
+**/*.pdf
+**/*.png
+**/*.jpg
+**/*.eps
 
 # Files
 docker.log
